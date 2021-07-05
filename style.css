@@ -1,0 +1,270 @@
+.main_menu{
+    width: 50%;
+    margin: 50px auto;
+    list-style: none;   
+    background: #4e4e4e;
+    min-height: 60px;
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+    border-radius: 5px;
+}
+
+.main_menu li{
+    float: left;  
+    margin: 10px 10px; 
+    background: gray;  
+    padding: 10px 20px;
+    border-radius: 15px 0 15px 0;
+    position: relative;
+    cursor: pointer;
+}
+.main_menu li a{
+    text-decoration: none;
+    color: aliceblue;    
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px;
+}
+.main_menu li a:hover{
+    color: orange;  
+    transition: .3s;
+}
+
+
+.active{
+    color: greenyellow!important;
+}
+.active:hover{
+    color: orange!important;
+}
+
+.dropdown{
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+}
+.dropdown li{
+    float: none;
+    border-radius: 0px 10px 0px 10px;
+    min-width: 180px;
+    margin: 1px 0;
+    padding: 10px 20px;
+    display: none;
+    background: #7d816b;
+    border-bottom: 3px solid darkred;
+}
+
+
+.dropdown li a{    
+    text-decoration: none;
+    color: #eaeaeb;    
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+}
+.dropdown li a:hover{    
+    color: greenyellow;
+}
+
+.main_menu li:hover .dropdown li{
+    display: block;
+}
+
+.sub_menu{
+    display: none;
+    float: none;
+    position: absolute;
+    left: 185px;
+    top: -2px;
+}
+.sub_menu li{ 
+    background: #363926;
+    margin: 2px 0;    
+    border-radius: 10px 0px 10px 0px;
+    border-bottom: 3px solid #050508;
+}
+
+.dropdown li:hover .sub_menu {
+    display: block;
+}
+
+
+.sub_menu li a {
+    color: #9fa1cc;    
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+}
+.sub_menu li a:hover{    
+    color: tomato;
+}
+
+
+
+
+    /*Media Query*/
+@media only screen and (min-width: 993px) and (max-width: 1400px) {
+  body {
+    background-color: powderblue;    
+  }
+  .main_menu{
+    width: 70%;
+    min-height: 60px;
+    margin: auto;
+   
+  }
+  .main_menu li{
+    float: left;
+    padding: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  .dropdown{
+    top: 35px;
+    left: 40px;
+    top: 30px;
+    
+  }
+  .dropdown li{
+      min-width: 200px;
+      background: tomato;
+      margin: 0;
+      padding: 10px 30px;
+      border-radius: 0px 10px 0px 10px ;
+  }
+  .sub_menu{
+    left: 70px;
+    top: 40px;
+    color: aliceblue;
+  }
+  .sub_menu li {
+    background: green;
+    min-width: 200px;
+    text-align: left;
+    padding: 10px 30px;
+    border-radius: 0px 10px 0px 10px ;
+  }
+  .sub_menu li a{
+    color: aliceblue; 
+    font-size: 14px;
+  }
+  .sub_menu li a:hover{
+    color: #f7db04;
+  }
+    
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  body {
+    background-color: aliceblue;    
+  }
+  .main_menu{
+    width: 600px;
+    min-height: 60px;
+    margin: auto;
+    z-index: -1;
+  }
+  .main_menu li{
+    float: left;
+    padding: 10px 5px;
+  }
+  .main_menu li a{
+   padding: 0 10px;
+  }
+
+  .dropdown{
+    top: 50px;
+    left: 60px;
+    z-index: 1;
+  }
+  .dropdown li{
+      min-width: 150px;
+      background: tomato;
+      margin: 0;
+      padding: 15px 20px;
+  }
+  .sub_menu{
+    left: 150px;
+    top: 0;
+    color: aliceblue;
+  }
+  .sub_menu li {
+    background: gray;
+    min-width: 200px;
+    text-align: left;
+    padding: 15px 20px;
+    border-radius: 20px 0px 20px 0px ;
+  }
+  .sub_menu li a{
+    color: aliceblue; 
+    font-size: 14px;
+  }
+  .sub_menu li a:hover{
+    color: #f7db04;
+  }
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;    
+  }
+  .main_menu{
+    width: 80%;
+    margin: auto ;
+    min-height: 60px;
+    z-index: -1;
+  }
+  .main_menu li{    
+    float: none;
+    padding: 5px;
+    text-align: center;
+    margin-left: -30px;
+  }
+  .main_menu li a{
+    font-size: 16px;
+  }
+
+  .dropdown{
+    top: 25px;
+    left: 200px;
+    z-index: 1;
+  }
+  .dropdown li{
+      min-width: 110px;
+      background: tomato;
+      padding: 5px 10px;
+      border-radius: 15px 0px 15px 0px ;
+  }
+  .dropdown li a{
+      font-size: 14px;
+      padding: 0;
+  }
+  .sub_menu{
+    left: -130px;
+    top: -150px;
+    color: aliceblue;
+    
+  }
+  .sub_menu li {
+    background: #868149;
+    min-width: 50px;
+    border-radius: 0px 10px 0px 10px ;
+  }
+  .sub_menu li a{
+    color: aliceblue;
+    font-size: 14px;
+  }
+  .sub_menu li a:hover{
+    color: #f70404;
+  }
+    
+}
+
+
